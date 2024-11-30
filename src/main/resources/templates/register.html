@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro de Producto</title>
+</head>
+<body>
+    <h1>Registro de Producto</h1>
+    <form action="#" th:action="@{/register}" th:object="${product}" method="post">
+        <label for="name">Nombre del Producto:</label>
+        <input type="text" id="name" th:field="*{name}" required><br><br>
+
+        <label for="expirationDate">Fecha de Caducidad:</label>
+        <input type="text" id="expirationDate" th:field="*{expirationDate}" placeholder="YYYY-MM-DD" required><br><br>
+
+        <label for="minStock">Stock Mínimo:</label>
+        <input type="text" id="minStock" th:field="*{minStock}" required><br><br>
+
+        <label for="maxStock">Stock Máximo:</label>
+        <input type="text" id="maxStock" th:field="*{maxStock}" required><br><br>
+
+        <label for="unitPrice">Precio Unitario:</label>
+        <input type="text" id="unitPrice" th:field="*{unitPrice}" required><br><br>
+
+        <label for="category">Categoría:</label>
+        <input type="text" id="category" th:field="*{category}" required><br><br>
+
+        <label for="brand">Marca:</label>
+        <input type="text" id="brand" th:field="*{brand}" required><br><br>
+
+        <button type="submit">Registrar Producto</button>
+    </form>
+</body>
+</html>
